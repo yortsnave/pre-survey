@@ -32,36 +32,32 @@
       <h3>
 <a id="to-get-started" class="anchor" href="#to-get-started" aria-hidden="true"><span class="octicon octicon-link"></span></a>To Get Started:</h3>
 
-<p>This will be the form submission</p>
-
-<pre><code>
-$ choose county
-$ choose city
-$ choose utility
-$ if any links are outdated/broken include a report button to send specific record details*
-</code></pre>
-
 <pre>
   <form id="ajax-contact" method="post" action="mailer.php">
     <div class="field">
         <label for="county">Choose County:</label>
         <input type="text" id="county" name="county" required>
-<br>        
+<p>        
         <label for="city">Choose City:</label>
         <input type="text" id="city" name="city" required>
-<br>        
+</p>
+<p>         
         <label for="utility">Choose Utility:</label>
         <input type="text" id="utility" name="utility" required>
-<br>      
+</p>
+<p>     
         <label for="name">Name:</label>
         <input type="text" id="name" name="name" required>
-<br>
+</p>
+<p>
         <label for="email">Email:</label>
         <input type="email" id="email" name="email" required>
-<br>
+</p>
+<p>
         <label for="message">Message:</label>
         <textarea id="message" name="message" required></textarea>
-<br>        
+</p>
+<p>      
         <button type="submit" class="btn2">Send</button>
     </div>
  </form>
