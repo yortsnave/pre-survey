@@ -3,6 +3,9 @@
     // Only process POST reqeusts.
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Get the form fields and remove whitespace.
+        $county = trim($_POST["county"]);
+        $city = trim($_POST["city"]);
+        $utility = trim($_POST["utility"]);
         $name = strip_tags(trim($_POST["name"]));
 				$name = str_replace(array("\r","\n"),array(" "," "),$name);
         $email = filter_var(trim($_POST["email"]), FILTER_SANITIZE_EMAIL);
@@ -18,12 +21,15 @@
 
         // Set the recipient email address.
         // FIXME: Update this to your desired email address.
-        $recipient = "hello@example.com";
+        $recipient = "troyevans89@gmail.com";
 
         // Set the email subject.
         $subject = "New contact from $name";
 
         // Build the email content.
+        $email_content = "County: $county\n";
+        $email_content = "City: $city\n";
+        $email_content = "Utility: $utility\n";
         $email_content = "Name: $name\n";
         $email_content .= "Email: $email\n\n";
         $email_content .= "Message:\n$message\n";
