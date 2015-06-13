@@ -29,9 +29,6 @@ $(function() {
 			$(formMessages).text(response);
 
 			// Clear the form.
-			$('#county').val('');
-			$('#city').val('');
-			$('#utility').val('');
 			$('#name').val('');
 			$('#email').val('');
 			$('#message').val('');
