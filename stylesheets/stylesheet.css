@@ -304,7 +304,7 @@ a {
 	position:relative;
 	padding-bottom:100%;
 	padding-top:30px;
-	height:875px;
+	height:900px;
 	overflow:hidden;
 }
 
@@ -315,5 +315,5 @@ a {
 	width:100%;
 	max-width: 600px;
 	height:875px;
-	max-height:1000px;
+	max-height:1500px;
 }
