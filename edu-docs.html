@@ -12,6 +12,28 @@
     <script src="semantic/dist/semantic.min.js"></script>
   </head>
   <body>
+    
+    <script>$(document).ready(function() {
+        var elements = $('div.container').children().hide();
+        $('#BodyPart').change(function() {
+            elements.hide();
+            var value = $(this).val();
+            if (value.length) { // if somethings' selected
+                elements.filter('.' + value).show(); // show the ones we want
+            }
+        });
+
+        $('.excercise_select').change(function(){
+            console.log(123);
+            $('.exercise_name').hide();
+            var subele=$('.exercise_name');
+            subele.filter('.'+$(this).val()).show();
+        });
+   });
+   
+     </script>
+      
+    
     <section class="page-header">
       <img src="images/811logo.png">
       <h1 class="project-name"> Utilities Info Request</h1>
@@ -32,60 +54,44 @@ $ git fetch origin
 $ git checkout gh-pages
 </code></pre>
 
-<select class="ui search dropdown">
-  <option value="">State</option>
-<option value="AL">Alabama</option>
-<option value="AK">Alaska</option>
-<option value="AZ">Arizona</option>
-<option value="AR">Arkansas</option>
-<option value="CA">California</option>
-<option value="CO">Colorado</option>
-<option value="CT">Connecticut</option>
-<option value="DE">Delaware</option>
-<option value="DC">District Of Columbia</option>
-<option value="FL">Florida</option>
-<option value="GA">Georgia</option>
-<option value="HI">Hawaii</option>
-<option value="ID">Idaho</option>
-<option value="IL">Illinois</option>
-<option value="IN">Indiana</option>
-<option value="IA">Iowa</option>
-<option value="KS">Kansas</option>
-<option value="KY">Kentucky</option>
-<option value="LA">Louisiana</option>
-<option value="ME">Maine</option>
-<option value="MD">Maryland</option>
-<option value="MA">Massachusetts</option>
-<option value="MI">Michigan</option>
-<option value="MN">Minnesota</option>
-<option value="MS">Mississippi</option>
-<option value="MO">Missouri</option>
-<option value="MT">Montana</option>
-<option value="NE">Nebraska</option>
-<option value="NV">Nevada</option>
-<option value="NH">New Hampshire</option>
-<option value="NJ">New Jersey</option>
-<option value="NM">New Mexico</option>
-<option value="NY">New York</option>
-<option value="NC">North Carolina</option>
-<option value="ND">North Dakota</option>
-<option value="OH">Ohio</option>
-<option value="OK">Oklahoma</option>
-<option value="OR">Oregon</option>
-<option value="PA">Pennsylvania</option>
-<option value="RI">Rhode Island</option>
-<option value="SC">South Carolina</option>
-<option value="SD">South Dakota</option>
-<option value="TN">Tennessee</option>
-<option value="TX">Texas</option>
-<option value="UT">Utah</option>
-<option value="VT">Vermont</option>
-<option value="VA">Virginia</option>
-<option value="WA">Washington</option>
-<option value="WV">West Virginia</option>
-<option value="WI">Wisconsin</option>
-<option value="WY">Wyoming</option>
+<div class="margins1">
+<h2>Main Body Part</h2>
+<select size="1" id="BodyPart" title="" name="BodyPart">
+<option value="">-Select Body Part-</option>
+<option value="chest">Chest</option>
+<option value="biceps">Biceps</option>
 </select>
+
+<div class="container">
+<div class="chest">
+<select class="excercise_select">
+<option value ="__select__">SELECT</option>
+<option value ="chestpress">Chest Press</option>
+<option value ="inclinechestpress">Incline Chest Press</option>
+</select>
+</div>
+<div class="chest">
+<div class="chestpress exercise_name">
+CHEST PRESS
+</div>
+<div class="inclinechestpress exercise_name">
+INCLINE CHEST PRESS    
+</div>
+</div>
+
+<div class="biceps">
+<select class="excercise_select">
+<option value ="__select__">SELECT</option>
+<option value="bicepcurls">Bicep Curls</option>
+<option value="hammercurls">Hammer Curls</option>
+</select>
+<div class="biceps">
+<div class="bicepcurls exercise_name">
+BICEP CURLS
+</div>
+<div class="hammercurls exercise_name">
+HAMMER CURLS   
+</div>
 
 
 <h3>
